@@ -25,6 +25,7 @@ export default{
 
 <style scoped>
 .box{
+    position: relative;
     width: 300px;
     height: 300px;
     left: 0px;
@@ -32,7 +33,7 @@ export default{
     transition: 1s;
 }
 .move{
-    left: 100px;
+    left: 300px;
     border-radius: 2rem;
     background-color: red;
 }

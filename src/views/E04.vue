@@ -1,19 +1,46 @@
-<script setup>
+<script>
+import { RouterLink } from 'vue-router'
+import Popup from "../components/Popup.vue"
+export default {
+    components: {
+        Popup
 
+    },
+    data() {
+        return {
+            isShow: false,
+            homeInfo:{
+                title:"rrrrrrrrrr",
+                content:"7414"
+            }
+        }
+    },
+    methods:{
+        changeShow(){
+            this.isShow=!this.isShow
+        }
+    }
+    }
 </script>
 
 <template>
-    <h1>EEEEEEE04</h1>
-    <div class="box"></div>
+    <div>
+        <h2>HG</h2>
+        <RouterLink to="/router-view">router-view</RouterLink>
+        <button type="button" @click="changeShow">rrrrrrr</button>
+       
+    </div>
+
+    <Popup 
+    v-if="isShow" 
+    @switch="changeShow"
+    :title="homeInfo.title"
+    :content="homeInfo.content" 
+    />
+    
   
 </template>
 
 <style scoped>
-.box{
-    width: 300px;
-    height: 300px;
-    background-image: url('data:image/png;base64,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');
-    
-}
 
 </style>

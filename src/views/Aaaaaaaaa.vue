@@ -34,6 +34,7 @@ export default {
 
 <style scoped>
 .box {
+    position: relative;
     width: 300px;
     height: 300px;
     left: 0px;
